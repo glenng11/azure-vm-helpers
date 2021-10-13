@@ -19,6 +19,7 @@ Set-NetIPInterface -InterfaceAlias $interfaceAlias -Dhcp Disabled
 New-NetIPAddress -InterfaceAlias $interfaceAlias -IPAddress $ipAddress -PrefixLength 24 -DefaultGateway $defaultGateway 
 Set-DnsClientServerAddress -InterfaceAlias $interfaceAlias -ServerAddresses $dnsAddresses
 
+Start-Sleep -Seconds 15
 
 If(-NOT (Test-Path $env:SystemDrive\'azagent'))
 {
