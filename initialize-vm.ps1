@@ -97,7 +97,7 @@ Remove-Item $agentZip
 # Register the agent in the environment
 Write-Host "Register agent $agentName in $Environment"
 
-.\config.cmd --unattended --environment --environmentname $Environment --agent $agentName --runasservice --work '_work' --url $OrganizationUrl --projectname $TeamProject --auth PAT --token $Token --addvirtualmachineresourcetags --virtualmachineresourcetags "$($Tags)"
+.\config.cmd --unattended --environment --environmentname $Environment --agent $agentName --runasservice --work '_work' --url $OrganizationUrl --projectname $Project --auth PAT --token $Token --addvirtualmachineresourcetags --virtualmachineresourcetags "$($Tags)"
 
 
 # Raise an exception if the registration of the agent failed
